@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Calculator</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            background-color: black;
+            height: 50px;
+            
+        }
+
+        table {
+            border-spacing: 30px;
+        }
+
+        td {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+            color: white;
+            border: 1px solid yellow;
+        }
+
+        th {
+            height: 20px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            padding-left: 50px;
+            padding-right: 60px;
+            background-color: powderblue;
+
+        }
+
+        input[type=text] {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-shadow: 2px 2px blue;">calculator</h1>
+    <form id="calculator">
+        <table style="width:50%" >
+            <tr>
+
+                <th style="width:50%"><input type="text" id="inputdisplay" readonly="true"> </th>
+
+            </tr>
+        </table>
+        <table style="width:50%">
+
+            <tr>
+                <td onclick="calculator.inputdisplay.value+='1'">1</td>
+                <td onclick="calculator.inputdisplay.value+='2'">2</td>
+                <td onclick="calculator.inputdisplay.value+='3'">3</td>
+                <td onclick="calculator.inputdisplay.value=''">c</td>
+            </tr>
+            <tr>
+                <td onclick="calculator.inputdisplay.value+='4'">4</td>
+                <td onclick="calculator.inputdisplay.value+='5'">5</td>
+                <td onclick="calculator.inputdisplay.value+='6'">6</td>
+                <td onclick="calculator.inputdisplay.value+='*'"><b>*</b></td>
+            </tr>
+            <tr>
+                <td onclick="calculator.inputdisplay.value+='7'">7</td>
+                <td onclick="calculator.inputdisplay.value+='8'">8</td>
+                <td onclick="calculator.inputdisplay.value+='9'">9</td>
+                <td onclick="calculator.inputdisplay.value+='-'"><b>-</b></td>
+            </tr>
+            <tr>
+                <td onclick="calculator.inputdisplay.value+='0'">0</td>
+                <td onclick="calculator.inputdisplay.value+='.'"><b>.</b></td>
+                <td onclick="calculator.inputdisplay.value=eval(calculator.inputdisplay.value)"><b>=</b></td>
+                <td onclick="calculator.inputdisplay.value+='+'"><b>+</b></td>
+            </tr>
+        </table>
+
+
+    </form>
+</body>
+
+</html>
